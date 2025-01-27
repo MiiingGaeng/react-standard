@@ -7,7 +7,7 @@ export const MainTable = ({ countries, setCountries }) => {
     const newCountryList = [...countries].filter(
       (country) => country.name !== name
     );
-    localStorage.setItem('countryList', newCountryList);
+    localStorage.setItem('countryList', JSON.stringify(newCountryList));
     setCountries(newCountryList);
 
     alert('정보가 삭제되었습니다!');
